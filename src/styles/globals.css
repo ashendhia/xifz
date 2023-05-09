@@ -1,27 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "AmberEN";
+  src: url("/fonts/AmberEN-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AmberEN";
+  src: url("/fonts/AmberEN-Medium.otf");
+  font-weight: medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AmberEN";
+  src: url("/fonts/AmberEN-Bold.otf");
+  font-weight: bold;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: "All Genders";
+  src: url("/fonts/All-Genders-Bold-v4.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tajawal";
+  src: url("https://fonts.googleapis.com/css2?family=Tajawal&display=swap");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply font-sans text-white bg-dark;
+}
+
+h1 {
+  text-shadow: 0px 5.04225px 5.04225px rgba(66, 190, 215, 0.25);
+  @apply font-title phone:text-[11vw] text-[4.730617608409987vw] leading-[137%] font-bold;
+}
+
+h2 {
+  @apply font-title phone:text-[6.763285024154589vw] text-[3.1537450722733245vw] leading-[137%] font-medium;
+}
+
+h3 {
+  @apply font-title phone:text-[4.830917874396135vw] text-[2.3653088042049935vw] leading-[137%] font-bold;
+}
+
+h4 {
+  @apply phone:text-[4.830917874396135vw] text-[1.5768725361366622vw] leading-[137%] font-bold;
+}
+
+p {
+  @apply phone:text-[3.864734299516908vw] text-[1.314060446780552vw] leading-[2.102496714848883vw] phone:leading-[6.280193236714976vw] phone:w-full w-[41.32720105124836vw];
+}
+
+ul {
+  @apply flex flex-col self-start items-start phone:gap-[4.830917874396135vw] gap-[1.5768725361366622vw];
+}
+
+li {
+  @apply flex flex-row gap-[1.5768725361366622vw] phone:gap-[3.5vw] phone:text-[3.864734299516908vw] text-[1.314060446780552vw] leading-[2.102496714848883vw] phone:leading-[6.280193236714976vw];
+}
+
+@layer components {
+  .nav {
+    @apply phone:text-[5.072463768115942vw] text-[1vw] leading-[137%] text-center;
+  }
+
+  .menuopen {
+    @apply phone:h-[24.154589371980677vw] phone:overflow-hidden h-[5.913272010512484vw];
+  }
+
+  .navbar {
+    background: rgba(25, 26, 38, 0.12);
+
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+
+    @apply phone:col phone:py-[8.695652173913043vw] phone:gap-[8.695652173913043vw] z-[3] fixed row w-full justify-between items-center phone:px-[6.763285024154589vw] px-[7.227332457293036vw];
+  }
+
+  .language {
+    @apply font-bold phone:text-[5.072463768115942vw] phone:leading-[137%] text-[1.1826544021024967vw] leading-[1.5111695137976346vw] row phone:gap-[4.830917874396135vw] gap-[0.5vw] justify-start items-center phone:h-[10vw] h-[3vw] transition-all duration-300 phone:ml-[4vw] ml-[1vw] phone:hover:ml-[4.5vw] hover:ml-[1.5vw] hover:text-light-green text-white;
+  }
+
+  .flag {
+    @apply phone:h-[5vw] h-[1.2vw] aspect-[1.5151515151515151];
+  }
+
+  .button {
+    @apply phone:w-[41.06280193236715vw] phone:h-[12.077294685990339vw] w-[11.169513797634691vw] h-[3.28515111695138vw] phone:text-[3.864734299516908vw] phone:leading-[5.072463768115942vw] relative text-center text-[1.1826544021024967vw] leading-[1.5111695137976346vw] overflow-hidden font-bold grid items-center justify-center border-[1px] rounded-md border-white;
+  }
+
+  .button:after {
+    content: "";
+    background: url("/assets/waves.png") no-repeat;
+    background-size: 100% 100%;
+    transition: all 0.3s linear;
+    z-index: -1;
+
+    @apply absolute left-0 phone:h-[24.154589371980677vw] h-[7.729468599033816vw] w-full phone:top-[12.077294685990339vw] top-[3.864734299516908vw];
+  }
+
+  .button:hover {
+    border: none;
+    transition-property: background-color;
+    transition-duration: 0;
+    transition-delay: 0.3s;
+  }
+
+  .button:hover:after {
+    transition: all 0.3s linear;
+    @apply phone:-top-[12.077294685990339vw] -top-[3.864734299516908vw];
+  }
+
+  .row {
+    @apply flex flex-row;
+  }
+
+  .col {
+    @apply flex flex-col;
+  }
+
+  .gradient {
+    background: linear-gradient(180deg, #142e2f 54.69%, #000101 100%);
+  }
+
+  .hero {
+    @apply gradient w-full h-[50.59vw] phone:h-[216.42512077294685vw];
+  }
+
+  .gradient-text {
+    background: linear-gradient(90.1deg, #47ee96 50.17%, #42bed7 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .main {
+    @apply phone:mt-[6.57030223390276vw] mt-[10.38107752956636vw] col mx-auto phone:w-[94.5vw] w-[79vw] phone:gap-[24.154589371980677vw] gap-[13.14060446780552vw];
+  }
+
+  .invest-main {
+    @apply phone:mt-[24.154589371980677vw] mt-[10.38107752956636vw] col mx-auto phone:w-[94.5vw] w-[79vw] phone:gap-[24.154589371980677vw] gap-[10.38107752956636vw];
+  }
+
+  .eco-main {
+    @apply phone:mt-[24.154589371980677vw] mt-[10.38107752956636vw] col mx-auto phone:w-[94.5vw] w-[79vw] phone:gap-[24.154589371980677vw] gap-[13.14060446780552vw];
+  }
+
+  .text-flex {
+    @apply col phone:items-center items-start phone:gap-[4.830917874396135vw] gap-[1.971090670170828vw];
+  }
+  .text-cta-flex {
+    @apply col phone:items-center items-start phone:gap-[8.212560386473431vw] gap-[2.628120893561104vw];
+  }
+
+  .section {
+    @apply w-full phone:col phone:gap-[15.458937198067632vw] row items-center justify-between;
+  }
+
+  .coinMarketCap {
+    @apply phone:w-full w-[60vw];
+  }
+
+  .hiddenRight {
+    @apply translate-x-[-20%] opacity-0;
+  }
+
+  .unhiddenX {
+    @apply translate-x-0;
+  }
+
+  .hiddenLeft {
+    @apply translate-x-[20%] opacity-0;
+  }
+
+  .hiddenDown {
+    @apply translate-y-[50%] opacity-0;
+  }
+
+  .unhiddenY {
+    @apply translate-y-0;
+  }
+
+  .showX {
+    @apply ease-in-out duration-[2s] translate-x-0 opacity-100;
+  }
+
+  .showY {
+    @apply ease-in-out duration-[2s] translate-y-0 opacity-100;
+  }
+
+  .animation {
+    @apply phone:hiddenDown phone:unhiddenX unhiddenY;
+  }
+
+  .showAnimation {
+    @apply phone:showY showX delay-200;
+  }
+
+  .perk {
+    @apply w-[2.3653088042049935vw] phone:w-[5.797101449275362vw];
+  }
 }

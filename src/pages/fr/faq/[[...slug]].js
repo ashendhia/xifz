@@ -318,7 +318,7 @@ const Faq = () => {
                                 </div>
                             </a>
                         </div>
-                        <div className={`hiddenDown ${docsVisible ? 'showY delay-[600ms]' : ''} row phone:col phone:gap-[6vw] justify-between phone:pt-[4vw] pt-[1.7739816031537452vw] phone:pb-[5vw] pb-[2.102496714848883vw]`}>
+                        <div className={`hiddenDown ${docsVisible ? 'showY delay-[800ms]' : ''} row phone:col phone:gap-[6vw] justify-between phone:pt-[4vw] pt-[1.7739816031537452vw] phone:pb-[5vw] pb-[2.102496714848883vw]`}>
                             <div className='row justify-between w-[37.450722733245726vw] items-end phone:w-[80vw]'>
                                 <h3 className='font-bold phone:text-[5.314009661835748vw]'>
                                     Avinoc - English
@@ -342,7 +342,7 @@ const Faq = () => {
                                 </div>
                             </a>
                         </div>
-                        <div className={`hiddenDown ${docsVisible ? 'showY delay-[600ms]' : ''} row phone:col phone:gap-[6vw] justify-between phone:pt-[4vw] pt-[1.7739816031537452vw] phone:pb-[5vw] pb-[2.102496714848883vw]`}>
+                        <div className={`hiddenDown ${docsVisible ? 'showY delay-[1s]' : ''} row phone:col phone:gap-[6vw] justify-between phone:pt-[4vw] pt-[1.7739816031537452vw] phone:pb-[5vw] pb-[2.102496714848883vw]`}>
                             <div className='row justify-between w-[37.450722733245726vw] items-end phone:w-[80vw]'>
                                 <h3 className='font-bold phone:text-[5.314009661835748vw]'>
                                     Tdrone - English

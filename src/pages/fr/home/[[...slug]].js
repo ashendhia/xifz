@@ -6,11 +6,11 @@ import Image from "next/image"
 import smartchain from "/public/assets/smartchain.png"
 import hub from "/public/assets/mintinghub.png"
 import sif from "/public/assets/Siffeddine.jpeg"
-/*import home from '/public/Home/home.png'
-import coin from '/public/Home/coin.png'
-import tokenization from '/public/Home/tokenisation ZENIQ.png'
-import zaid from '/public/Home/zaid.jpeg'
-import hub from '/public/Home/hub.svg' */
+import unlock from "/public/assets/unlockmedialogo.png"
+import lg from "/public/assets/lg.jpg"
+import ab from "/public/assets/ab.png"
+import cvz from "/public/assets/cvz.png"
+import elaym from "/public/assets/elaym.png"
 
 
 const Home = () => {
@@ -33,31 +33,11 @@ const Home = () => {
     const { ref: bulletPoints, inView: pointsAreVisible } = useInView({ triggerOnce: true })
     const { ref: zenSuccess, inView: successPointsAreVisible } = useInView({ triggerOnce: true })
     const { ref: zHub, inView: zHubVisible } = useInView({ triggerOnce: true })
-    const { ref: bitcoin, inView: bitZenVisible } = useInView({ triggerOnce: true })
     const { ref: me, inView: meVisible } = useInView({ triggerOnce: true })
     const { ref: social, inView: socialVisible } = useInView({ triggerOnce: true })
 
     const [showButton, setShowButton] = useState(false)
     const [phone, setPhone] = useState(false)
-
-
-    //const images = importAll(require.context('/public/Sources', false, /\.(png|jpe?g|svg)$/));
-
-    const pages = [
-        "https://www.arabianbusiness.com/technology/466301-uae-gets-new-blockchain-tokenisation-platform",
-        "https://www.emaratalyoum.com/business/local/2021-07-25-1.1517526",
-        "https://cryptonewsbtc.org/2021/07/19/zeniq-launches-groundbreaking-blockchain-tokenization-platform-in-dubai/",
-        "https://cryptovoize.com/zeniq-launches-blockchain-tokenization-platform-in-dubai/",
-        "https://www.pressreader.com/bahrain/gulf-today/20210719/281857236552641",
-        "https://logisticsgulf.com/2021/07/zeniq-launches-groundbreaking-blockchain-tokenization-platform-in-dubai/",
-        "https://issuu.com/meafinance/docs/mea-finance-aug-2021/56",
-        "https://www.unlock-bc.com/news/2021-07-25/uae-based-zeniq-founder-wants-to-build-a-blockchain-financial-platform-for-uae-government/",
-        "https://www.arabianbusiness.com/technology/466301-uae-gets-new-blockchain-tokenisation-platform",
-        "https://www.emaratalyoum.com/business/local/2021-07-25-1.1517526",
-        "https://cryptonewsbtc.org/2021/07/19/zeniq-launches-groundbreaking-blockchain-tokenization-platform-in-dubai/",
-        "https://cryptovoize.com/zeniq-launches-blockchain-tokenization-platform-in-dubai/",
-        "https://www.pressreader.com/bahrain/gulf-today/20210719/281857236552641"
-    ]
 
     const handleScroll = () => {
         if (phone) {
@@ -96,8 +76,26 @@ const Home = () => {
 
     return (
         <main>
-            <header ref={hero} className="hero grid justify-center items-center">
-                <div className="phone:col phone:gap-[18.357487922705314vw] row items-center gap-[6.044678055190539vw]" >
+            <header ref={hero} className="hero phone:items-start grid justify-center items-center">
+                <div className="col phone:flex-col-reverse absolute items-center phone:top-[176.32850241545896vw] phone:left-[11.594202898550725vw] phone:gap-[5.072463768115942vw] top-[11.76084099868594vw] left-[2.7595269382391594vw]">
+                    <div className="col phone:row phone:gap-[4.7270531400966185vw] gap-[0.9845288326300985vw]">
+                        <a href="https://www.unlock-bc.com/news/2021-07-25/uae-based-zeniq-founder-wants-to-build-a-blockchain-financial-platform-for-uae-government/" target="_blank" className={` phone:hiddenRight phone:unhiddenY hiddenDown ${heroVisible ? 'phone:showX showY delay-200' : ''} phone:w-[11.594202898550725vw] w-[2.3653088042049935vw] aspect-square bg-white rounded-full grid items-center justify-center`}>
+                            <div style={{ backgroundImage: `url(${unlock.src})` }} className="phone:w-[8.937198067632849vw] w-[1.8712220762155058vw] aspect-[1.0953846153846154] bg-center bg-cover" />
+                        </a>
+                        <a href="https://cryptovoize.com/zeniq-launches-blockchain-tokenization-platform-in-dubai/" target="_blank" className={` phone:hiddenRight phone:unhiddenY hiddenDown ${heroVisible ? 'phone:showX showY delay-[400ms]' : ''} phone:w-[11.594202898550725vw] w-[2.3653088042049935vw] aspect-square bg-[#003B94] rounded-full grid items-center justify-center`}>
+                            <div style={{ backgroundImage: `url(${cvz.src})` }} className="phone:w-[8.937198067632849vw] w-[1.8396846254927726vw] aspect-[1.3333333333333333] bg-center bg-cover" />
+                        </a>
+                        <a href="https://www.emaratalyoum.com/business/local/2021-07-25-1.1517526" target="_blank" className={` phone:hiddenRight phone:unhiddenY hiddenDown ${heroVisible ? 'phone:showX showY delay-[600ms]' : ''} phone:w-[11.594202898550725vw] w-[2.3653088042049935vw] aspect-square bg-white rounded-full grid items-center justify-center`}>
+                            <div style={{ backgroundImage: `url(${elaym.src})` }} className="phone:w-[8.937198067632849vw] w-[2.1681997371879107vw] aspect-[3.4020618556701034] bg-center bg-cover" />
+                        </a>
+                        <a href="https://logisticsgulf.com/2021/07/zeniq-launches-groundbreaking-blockchain-tokenization-platform-in-dubai/" target="_blank" style={{ backgroundImage: `url(${lg.src})` }} className={` phone:hiddenRight phone:unhiddenY hiddenDown ${heroVisible ? 'phone:showX showY delay-[800ms]' : ''} phone:w-[11.594202898550725vw] w-[2.3653088042049935vw] aspect-square bg-center bg-cover rounded-full`} />
+                        <a href="https://www.arabianbusiness.com/industries/technology/466301-uae-gets-new-blockchain-tokenisation-platform" target="_blank" style={{ backgroundImage: `url(${ab.src})` }} className={` phone:hiddenRight phone:unhiddenY hiddenDown ${heroVisible ? 'phone:showX showY delay-1000' : ''} phone:w-[11.594202898550725vw] w-[2.3653088042049935vw] aspect-square bg-center bg-cover rounded-full`} />
+                    </div>
+                    <h4 className={` phone:text-[6.763285024154589vw] origin-center font-normal hiddenDown ${heroVisible ? 'phone:translate-y-0 translate-y-[6.2vw] showY phone:delay-500 delay-200' : ''} phone:rotate-0 -rotate-90 `}>
+                        Comme Inclus En
+                    </h4>
+                </div>
+                <div className="phone:col phone:mt-[34.78260869565217vw] phone:gap-[18.357487922705314vw] row items-center gap-[6.044678055190539vw]" >
                     <svg viewBox="0 0 459 447" fill="none" className={`animation hiddenLeft ${heroVisible ? 'showAnimation' : ''} phone:w-[74.8792270531401vw] w-[30.15768725361367vw]`} xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_13_549)">
                             <path d="M126.745 410.431L167.278 338.661L151.811 303.333L151.958 303.266L200.252 282.077L149.51 188.172L151.448 107.125L151.535 107.078L231.985 64.2041L249.921 7.06969L274.209 44.8597L371.635 71.8707V72.0116L366.269 122.063L406.078 93.4286L405.85 93.9719L374.801 168.72L445.612 221.817L445.525 221.944L390.456 306.787L405.944 343.947L340.848 308.907L324.978 409.13H324.817L235.406 401.007L126.745 410.431ZM152.233 303.5L167.66 338.681L167.62 338.755L127.375 410.042L235.426 400.652L324.729 408.748L340.626 308.35L340.834 308.457L405.307 343.182L390.081 306.753L390.127 306.68L445.129 221.897L374.365 168.834L374.419 168.713L405.273 94.3877L365.833 122.774L371.273 72.1323L274.014 45.1816V45.128L250.028 7.87458L232.267 64.4388L232.206 64.4724L151.777 107.3L149.845 188.105L200.701 282.238L200.534 282.311L152.233 303.5Z" fill="#B6E8E3" />
@@ -605,7 +603,7 @@ const Home = () => {
                                 Salut!
                             </h3>
                             <p>
-                                Je suis Professeur Siffedine de l'Algérie, né en 1982, entrepreneur et ingénieur civil diplômé en 2014, j'ai travailé dans plusieurs domaines, secteurs publiques et privées, et possesseur d'une entreprise de construction.
+                                Je suis Professeur Siffedine de l'Algérie, né en 1982, entrepreneur et ingénieur civil diplômé en 2004, j'ai travailé dans plusieurs domaines, secteurs publiques et privées, et possesseur d'une entreprise de construction.
                                 <br /><br />
                                 Et Maintenant investiseur dans ZENIQ Technologies et marketeur officiel chez Safir Global, je suis un homme ambitieux qui cherche à se développer tout le temps pour pouvoir aider le maximum de personnes à améliorer leur mode de vie grâce à mon expérience acquise dans le domaine.
                             </p>
@@ -615,14 +613,24 @@ const Home = () => {
                 </section>
                 <section id="contact" ref={social} className="col items-center gap-[6vw]">
                     <h2>Contact</h2>
-                    <div className="row items-center phone:gap-[19.32367149758454vw] gap-[13.14060446780552vw]">
+                    <div className="row items-center flex-wrap phone:gap-[19.32367149758454vw] gap-[13.14060446780552vw] w-[26.609724047306177vw] phone:w-[46.4vw]">
+                        <a id="facebook" href="https://web.facebook.com/steve25dz?mibextid=ZbWKwL&_rdc=1&_rdr" target='_blank' >
+                            <svg class={`phone:w-[13.526570048309178vw] w-[6.57030223390276vw] hiddenRight ${socialVisible ? 'showX' : ''} delay-200 `} viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fillRule="evenodd" clipRule="evenodd" d="M56.1395 28.2245C56.1395 12.7605 43.6035 0.224487 28.1395 0.224487C12.6755 0.224487 0.139526 12.7605 0.139526 28.2245C0.139526 42.2001 10.3787 53.7839 23.7645 55.8844V36.3184H16.6551V28.2245H23.7645V22.0558C23.7645 15.0383 27.9447 11.162 34.3406 11.162C37.404 11.162 40.6084 11.7089 40.6084 11.7089V18.5995H37.0776C33.5993 18.5995 32.5145 20.7579 32.5145 22.9722V28.2245H40.2801L39.0388 36.3184H32.5145V55.8844C45.9004 53.7839 56.1395 42.2001 56.1395 28.2245Z" className="fill-medium-green" />
+                            </svg>
+                        </a>
+                        <a id="instagram" href="https://www.instagram.com/seife_ddine25/?igshid=ZGUzMzM3NWJiOQ%3D%3D" target='_blank' >
+                            <svg class={`phone:w-[13.526570048309178vw] w-[6.57030223390276vw] hiddenRight ${socialVisible ? 'showX' : ''} delay-500 `} viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fillRule="evenodd" clipRule="evenodd" d="M29.974 0.111816C44.1824 0.111816 55.8074 11.7369 55.8074 25.9453V29.9815C55.8074 44.19 44.1823 55.815 29.974 55.815H25.9377C11.7293 55.815 0.104248 44.19 0.104248 29.9815V25.9453C0.104248 11.7369 11.7293 0.111816 25.9377 0.111816H29.974ZM28.4637 14.1123L28.1042 14.1118C25.1113 14.1118 22.1184 14.2107 22.1184 14.2107C17.747 14.2107 14.2032 17.7545 14.2032 22.126C14.2032 22.126 14.1123 24.6959 14.1047 27.4543L14.1042 27.815C14.1042 30.9035 14.2032 34.0977 14.2032 34.0977C14.2032 38.4691 17.747 42.0129 22.1184 42.0129C22.1184 42.0129 24.9167 42.1118 27.8075 42.1118C30.896 42.1118 34.1891 42.0129 34.1891 42.0129C38.5605 42.0129 42.0053 38.5681 42.0053 34.1967C42.0053 34.1967 42.1042 31.0385 42.1042 28.0129L42.1024 27.3029C42.089 24.5884 42.0053 22.027 42.0053 22.027C42.0053 17.6555 38.5605 14.2107 34.189 14.2107C34.189 14.2107 31.3396 14.1196 28.4637 14.1123ZM28.1042 16.6318C30.5585 16.6318 33.7052 16.7129 33.7052 16.7129C37.2899 16.7129 39.5031 18.9261 39.5031 22.5107C39.5031 22.5107 39.5842 25.6038 39.5842 28.0306C39.5842 30.5115 39.5031 33.7127 39.5031 33.7127C39.5031 37.2973 37.2899 39.5105 33.7052 39.5105C33.7052 39.5105 30.9224 39.5787 28.5079 39.5901L27.8609 39.5917C25.4904 39.5917 22.6022 39.5105 22.6022 39.5105C19.0176 39.5105 16.7054 37.1983 16.7054 33.6138C16.7054 33.6138 16.6242 30.4009 16.6242 27.8684C16.6242 25.4979 16.7054 22.5107 16.7054 22.5107C16.7054 18.9261 19.0177 16.7129 22.6022 16.7129C22.6022 16.7129 25.65 16.6318 28.1042 16.6318ZM28.1042 20.9402C24.1434 20.9402 20.9326 24.151 20.9326 28.1117C20.9326 32.0725 24.1434 35.2833 28.1042 35.2833C32.065 35.2833 35.2758 32.0725 35.2758 28.1117C35.2758 24.151 32.065 20.9402 28.1042 20.9402ZM28.1042 23.445C30.6815 23.445 32.7709 25.5344 32.7709 28.1117C32.7709 30.6891 30.6815 32.7784 28.1042 32.7784C25.5269 32.7784 23.4375 30.6891 23.4375 28.1117C23.4375 25.5344 25.5268 23.445 28.1042 23.445ZM35.6189 18.95C34.6619 18.95 33.8861 19.7297 33.8861 20.6914C33.8861 21.6532 34.6619 22.4328 35.6189 22.4328C36.5759 22.4328 37.3517 21.6532 37.3517 20.6914C37.3517 19.7296 36.5759 18.95 35.6189 18.95Z" className="fill-medium-green" />
+                            </svg>
+                        </a>
                         <a href='https://wa.me/213560911632?text=Hello%20I%20would%20like%20to%20know%20more%20about%20ZENIQ%20and%20its%20token%20ZENIQ%20COIN' target='_blank' rel="noreferrer" id="whatsapp" >
-                            <svg class={`phone:w-[13.526570048309178vw] w-[6.57030223390276vw] hiddenRight ${socialVisible ? 'showX' : ''} delay-200`} viewBox="0 0 57 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class={`phone:w-[13.526570048309178vw] w-[6.57030223390276vw] hiddenRight ${socialVisible ? 'showX' : ''} delay-700`} viewBox="0 0 57 58" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fillRule="evenodd" clipRule="evenodd" d="M47.98 9.06135C42.7625 3.80944 35.66 0.864759 28.2572 0.884498C12.8874 0.884498 0.37884 13.3918 0.373493 28.7654C0.366929 33.6583 1.6508 38.4663 4.09558 42.7047L0.139526 57.1545L14.9209 53.2773C19.0088 55.5048 23.5899 56.6718 28.2452 56.6718H28.2572C43.6242 56.6718 56.134 44.1632 56.1394 28.7896C56.1633 21.3877 53.2252 14.2839 47.98 9.06135ZM40.9689 34.5985C40.2724 34.2496 36.8471 32.5652 36.208 32.3258C35.569 32.0865 35.1051 31.9768 34.6412 32.6747C34.1773 33.3727 32.8417 34.9409 32.4352 35.4062C32.0288 35.8713 31.6224 35.9288 30.9256 35.58C30.2291 35.2311 27.9844 34.4956 25.3226 32.1227C23.2516 30.2748 21.8464 27.9941 21.4453 27.2961C21.0442 26.5982 21.4025 26.2265 21.7515 25.8735C22.0643 25.5621 22.448 25.0606 22.7956 24.653C23.1433 24.2452 23.2609 23.9564 23.4921 23.4912C23.7236 23.0259 23.6084 22.6195 23.4346 22.2705C23.2609 21.9216 21.8665 18.4923 21.2862 17.0978C20.7207 15.7394 20.1471 15.9226 19.7193 15.8945C19.3182 15.8745 18.8476 15.8705 18.3824 15.8705C17.6684 15.8891 16.9947 16.2051 16.524 16.7422C15.8862 17.4401 14.0867 19.1246 14.0867 22.5539C14.0867 25.9833 16.5828 29.2962 16.9304 29.7615C17.278 30.2268 21.8437 37.2632 28.8294 40.282C30.1268 40.8416 31.4526 41.3325 32.8016 41.7527C34.47 42.2874 35.9888 42.2086 37.1893 42.0295C38.5263 41.8289 41.3113 40.3435 41.8927 38.7163C42.4743 37.0894 42.4731 35.6935 42.294 35.4034C42.1148 35.1133 41.6654 34.9529 40.9689 34.6039V34.5985Z" className="fill-medium-green" />
                             </svg>
                         </a>
                         <a id="telegram" href="https://t.me/213697058773" target='_blank' >
-                            <svg class={`phone:w-[13.526570048309178vw] w-[6.57030223390276vw] hiddenRight ${socialVisible ? 'showX' : ''} delay-500 `} viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class={`phone:w-[13.526570048309178vw] w-[6.57030223390276vw] hiddenRight ${socialVisible ? 'showX' : ''} delay-1000 `} viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fillRule="evenodd" clipRule="evenodd" d="M56.8606 28.0195C56.8606 43.4833 44.3244 56.0195 28.8606 56.0195C13.3966 56.0195 0.860596 43.4833 0.860596 28.0195C0.860596 12.5554 13.3966 0.0194092 28.8606 0.0194092C44.3244 0.0194092 56.8606 12.5554 56.8606 28.0195ZM29.8638 20.6903C27.1406 21.823 21.6976 24.1675 13.535 27.7238C12.2095 28.251 11.5152 28.7668 11.452 29.2708C11.3451 30.1231 12.4122 30.4585 13.8653 30.9155C14.063 30.9777 14.2678 31.0421 14.4778 31.1101C15.9074 31.5749 17.8305 32.1187 18.8302 32.1402C19.7371 32.1598 20.7493 31.786 21.8667 31.0185C29.4934 25.8704 33.4302 23.2684 33.6772 23.2121C33.8516 23.1726 34.0932 23.1228 34.257 23.2684C34.4208 23.414 34.4046 23.6895 34.3872 23.7634C34.2817 24.2142 30.0929 28.1085 27.9251 30.1237C27.2495 30.752 26.7701 31.1975 26.6721 31.2994C26.4526 31.5273 26.2289 31.7429 26.0138 31.9501C24.6858 33.2305 23.6896 34.1907 26.069 35.7587C27.2125 36.5121 28.1273 37.1351 29.0401 37.7567C30.0369 38.4357 31.0312 39.1128 32.3178 39.9562C32.6454 40.1709 32.9584 40.3941 33.2633 40.6114C34.4234 41.4385 35.4655 42.1816 36.7532 42.0629C37.5014 41.9943 38.2742 41.2906 38.6668 39.1923C39.5944 34.2335 41.4178 23.489 41.8392 19.0617C41.8761 18.6738 41.8296 18.1774 41.7924 17.9595C41.7549 17.7415 41.677 17.431 41.3937 17.2012C41.0582 16.9289 40.5405 16.8715 40.3087 16.8754C39.2556 16.8942 37.6397 17.456 29.8638 20.6903Z" className="fill-medium-green" />
                             </svg>
                         </a>

@@ -212,4 +212,12 @@ li {
   .perk {
     @apply w-[2.3653088042049935vw] phone:w-[5.797101449275362vw];
   }
+
+  .bannerSmall {
+    @apply phone:h-[22vw] h-[6.57030223390276vw];
+  }
+
+  .banner {
+    @apply phone:h-[130vw] h-[34vw];
+  }
 }

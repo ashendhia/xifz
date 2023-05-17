@@ -160,6 +160,8 @@ export default function App({ Component, pageProps }) {
 
   const [menuOpen, setMenuOpen] = useState(false)
   const navbarRef = useRef(null)
+  const ref = useRef(null);
+  const [rotate, setRotate] = useState(0)
   const [langRoute, setLangRoute] = useState("")
   const [currentRoute, setCurrentRoute] = useState("")
   const [navBar, setNavBar] = useState(null)
@@ -346,7 +348,7 @@ export default function App({ Component, pageProps }) {
         </div>
       </nav>
       <Component {...pageProps} />
-      <footer className='phone:mt-[25vw] mt-[7.5vw] w-full phone:h-[200vw] h-[40vw] border-t-medium-green border-t-[1px] col items-center justify-center divide-y divide-white/[.1]'>
+      <footer className='phone:mt-[25vw] mt-[7.5vw] w-full phone:pt-[15.458937198067632vw] phone:pb-[7vw] py-[9vw] border-t-medium-green border-t-[1px] col items-center justify-center gap-[5vw] phone:gap-[15.458937198067632vw] divide-y divide-white/[.1]'>
         <div className='phone:col phone:gap-[20vw] phone:items-center row w-[80%] justify-between'>
           <div className='row phone:order-2 flex-wrap phone:gap-[10vw] justify-between phone:w-full w-[50%]'>
             <div className='col phone:gap-[3.5vw] gap-[1.5768725361366622vw]'>
@@ -579,6 +581,25 @@ export default function App({ Component, pageProps }) {
               {footer.started.join}
             </a>
           </div>
+        </div>
+        <div ref={ref} style={{ backgroundImage: "url(https://safir.com/backoffice/bannerfiles/background_border_lg.png)" }} className="relative phone:w-full w-1/2 bannerSmall bg-cover">
+          <div>
+            <img src="https://safir.com/backoffice/bannerfiles/Pfeil_runter.svg" alt className=" cursor-pointer absolute phone:w-[7.246376811594203vw] w-[1.971090670170828vw] right-[1.971090670170828vw] phone:right-[7.246376811594203vw] phone:top-[7.246376811594203vw] top-[1.971090670170828vw] z-[2] transition all duration-300 " onClick={(e) => {
+              if (rotate === 180) {
+                setRotate(0)
+                ref.current.classList.remove("banner")
+                ref.current.classList.add("bannerSmall")
+                e.target.classList.remove("rotate-180")
+              } else {
+                setRotate(180)
+                ref.current.classList.remove("bannerSmall")
+                ref.current.classList.add("banner")
+                e.target.classList.add("rotate-180")
+              }
+            }} />
+            <div className="w-full h-[3.28515111695138vw] absolute top-0 left-0 z-[1]" />
+          </div>
+          <iframe src="https://safir.com/backend/banner/db60371a-b1b1-4f7b-9826-3dd58a822071" className="w-full h-full" ></iframe>
         </div>
       </footer>
     </div>

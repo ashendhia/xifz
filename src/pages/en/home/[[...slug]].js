@@ -11,6 +11,7 @@ import lg from "/public/assets/lg.jpg"
 import ab from "/public/assets/ab.png"
 import cvz from "/public/assets/cvz.png"
 import elaym from "/public/assets/elaym.png"
+import Head from "next/head"
 
 
 
@@ -76,6 +77,11 @@ const Home = () => {
 
     return (
         <main>
+            <Head>
+                <title>SAFIR ZENIQ Relational marketing of High-Tech products for the world | Siffedine</title>
+                <meta name="description" content="Join Safir, and improve your life.
+We market and distribute high-value products in different categories such as blockchain-based hardware, healthcare and more." />
+            </Head>
             <header ref={hero} className="hero phone:items-start grid justify-center items-center">
                 <div className="col phone:flex-col-reverse absolute items-center phone:top-[176.32850241545896vw] phone:left-[11.594202898550725vw] phone:gap-[5.072463768115942vw] top-[11.76084099868594vw] left-[2.7595269382391594vw]">
                     <div className="col phone:row phone:gap-[4.7270531400966185vw] gap-[0.9845288326300985vw]">
@@ -218,9 +224,12 @@ const Home = () => {
 
                             </h2>
                             <p>
-                                ZENIQ, based at the Dubai International Financial Center (DIFC), pioneers in the global market for 100% secure and user-friendly digital asset management for users, investors and innovators.
+                                SAFIR Group International Ltd. works with companies in various emerging and revolutionary industries. This gives all of us the opportunity to offer highly innovative products and solutions to change and improve lives.
                             </p>
-                            <p>ZENIQ aims to foster financial freedom through access to easy and secure blockchain technology, and become the most most popular portal for digital investments.</p>
+                            <p>
+                                Our Eco System empowers you - and people around you - to create your own future.
+                                Your Mission is to take advantage of these possibilities!
+                            </p>
                         </div>
                         <Image className={`animation hiddenLeft ${aboutIsVisible ? 'showAnimation' : ''} phone:w-[86.71497584541062vw] w-[26.675427069645202vw] aspect-[0.9530516431924883]`} src={smartchain} />
                     </div>
@@ -460,7 +469,7 @@ const Home = () => {
                 </section>
                 <section ref={zenSuccess} className="col items-center relative phone:gap-[11.594202898550725vw] gap-[5.124835742444152vw]">
                     <h2 className="text-light-green">
-                        Key Points of ZENIQ's Success
+                        Key Points of SAFIR's Success
                     </h2>
                     <div className="phone:hidden row self-start -ml-[10.315374507227332vw] gap-[3.679369250985545vw]">
                         <svg className="w-[39.42181340341656vw]" viewBox="0 0 600 899" fill="none" xmlns="http://www.w3.org/2000/svg">

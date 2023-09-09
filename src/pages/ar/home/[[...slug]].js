@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react"
 import { useInView } from 'react-intersection-observer'
 import Image from "next/image"
+import Head from "next/head"
 
 
 import smartchain from "/public/assets/smartchain.png"
@@ -77,6 +78,11 @@ const Home = () => {
     return (
 
         <main>
+            <Head>
+                <title>سفير زينيك التسويق العلاقاتي لمنتجات التكنولوجيا الفائقة للعالم | سيف الدين</title>
+                <meta name="description" content="انضم إلى سفير، وقم بتحسين حياتك.
+نقوم بتسويق وتوزيع المنتجات عالية القيمة في فئات مختلفة مثل الأجهزة القائمة على blockchain والرعاية الصحية والمزيد." />
+            </Head>
             <header ref={hero} className="hero phone:items-start grid justify-center items-center">
                 <div className="col phone:flex-col-reverse absolute items-center phone:top-[176.32850241545896vw] phone:left-[11.594202898550725vw] phone:gap-[5.072463768115942vw] top-[11.76084099868594vw] left-[2.7595269382391594vw]">
                     <div className="col phone:row phone:gap-[4.7270531400966185vw] gap-[0.9845288326300985vw]">
@@ -224,10 +230,10 @@ const Home = () => {
 
                             </h2>
                             <p >
-                                تعتبر ZENIQ ، التي يقع مقرها في مركز دبي المالي العالمي (DIFC) ، رائدة في السوق العالمية لإدارة الأصول الرقمية الآمنة وسهلة الاستخدام بنسبة 100٪ للمستخدمين والمستثمرين والمبتكرين.
+                                تعمل مجموعة SAFIR Group International Ltd. مع شركات في مختلف الصناعات الناشئة والثورية. وهذا يمنحنا جميعًا الفرصة لتقديم منتجات وحلول مبتكرة للغاية لتغيير الحياة وتحسينها.
                             </p>
                             <p >
-                                تهدف ZENIQ إلى أن تصبح بوابة للاستثمارات الرقمية في غضون سنوات قليلة وستكون واحدة من أفضل البورصات في العالم مع التبادلات اللامركزية من خلال blockchain القوية والسريعة.
+                                يمكّنك نظامنا البيئي - والأشخاص من حولك - من إنشاء مستقبلك الخاص. مهمتكم هي الاستفادة من هذه الاحتمالات!
                             </p>
                         </div>
                         <Image className={`animation hiddenLeft ${aboutIsVisible ? 'showAnimation' : ''} phone:w-[86.71497584541062vw] w-[26.675427069645202vw] aspect-[0.9530516431924883]`} src={smartchain} />

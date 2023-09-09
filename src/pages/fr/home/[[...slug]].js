@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react"
 import { useInView } from 'react-intersection-observer'
 import Image from "next/image"
+import Head from "next/head"
 
 
 import smartchain from "/public/assets/smartchain.png"
@@ -76,6 +77,10 @@ const Home = () => {
 
     return (
         <main>
+            <Head>
+                <title>SAFIR ZENIQ Marketing relationnel de produits High-Tech pour le Monde | Siffedine</title>
+                <meta name="description" content="Rejoignez Safir et améliorez votre vie. Nous commercialisons et distribuons des produits de grande valeur tels que du matériel de blockchain, de santé et plus." />
+            </Head>
             <header ref={hero} className="hero phone:items-start grid justify-center items-center">
                 <div className="col phone:flex-col-reverse absolute items-center phone:top-[176.32850241545896vw] phone:left-[11.594202898550725vw] phone:gap-[5.072463768115942vw] top-[11.76084099868594vw] left-[2.7595269382391594vw]">
                     <div className="col phone:row phone:gap-[4.7270531400966185vw] gap-[0.9845288326300985vw]">
@@ -219,10 +224,11 @@ const Home = () => {
 
                             </h2>
                             <p>
-                                ZENIQ, basée au Centre financier international de Dubaï (DIFC), est pionnière sur le marché mondial de la gestion d'actifs numériques 100 % sécurisée et conviviale pour les utilisateurs, les investisseurs et les innovateurs.
+                                SAFIR Group International Ltd. travaille avec des entreprises de diverses industries émergentes et révolutionnaires. Cela nous donne à tous la possibilité de proposer des produits et des solutions hautement innovants pour changer et améliorer la vie.
                             </p>
                             <p>
-                                ZENIQ vise à favoriser la liberté financière grâce à l'accès à une technologie blockchain simple et sécurisée, et à devenir le portail le plus populaire pour les investissements numériques.
+                                Notre Eco System vous permet, ainsi qu'à votre entourage, de créer votre propre avenir.
+                                Votre mission est de profiter de ces possibilités !
                             </p>
                         </div>
                         <Image className={`animation hiddenLeft ${aboutIsVisible ? 'showAnimation' : ''} phone:w-[86.71497584541062vw] w-[26.675427069645202vw] aspect-[0.9530516431924883]`} src={smartchain} />
@@ -463,7 +469,7 @@ const Home = () => {
                 </section>
                 <section ref={zenSuccess} className="col items-center relative phone:gap-[11.594202898550725vw] gap-[5.124835742444152vw]">
                     <h2 className="text-light-green">
-                        Principaux points du succès de ZENIQ
+                        Principaux points du succès de SAFIR
                     </h2>
                     <div className="phone:hidden row self-start -ml-[10.315374507227332vw] gap-[3.679369250985545vw]">
                         <svg className="w-[39.42181340341656vw]" viewBox="0 0 600 899" fill="none" xmlns="http://www.w3.org/2000/svg">

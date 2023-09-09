@@ -1,26 +1,31 @@
 import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
+import ddx from '/public/assets/ddx.png'
+import vooPic from '/public/assets/voo.jpg'
 import avinoc from '/public/assets/avinoc.png'
 import hsvtol from '/public/assets/hsvtol.jpg'
 import aircraft from '/public/assets/aircraft.png'
 import tupanPic from '/public/assets/tupan.png'
 
 import sidiImage from '/public/assets/sido.jpg'
-// import tdrone from '/public/Invest/tdrone.png'
 import sidi from '/public/assets/sidi.png'
 import regardless from '/public/assets/regardless.jpg'
+import Head from 'next/head'
 
 const Invest = () => {
 
     // ? Animations
 
-
+    const [youtube, setYoutube] = useState(false);
     const [vimeo, setVimeo] = useState(false);
 
     const { ref: hero, inView: heroVisible } = useInView({ triggerOnce: true })
+    const { ref: desertPearl, inView: desertPearlVisible } = useInView({ triggerOnce: true })
+    const { ref: dtp, inView: dtpVisible } = useInView({ triggerOnce: true })
     const { ref: avinoc100, inView: avinoc100Visible } = useInView({ triggerOnce: true })
     const { ref: avinocR, inView: avinocVisible } = useInView({ triggerOnce: true })
+    const { ref: voo, inView: vooVisible } = useInView({ triggerOnce: true })
     const { ref: hsvtolR, inView: hsvtolVisible } = useInView({ triggerOnce: true })
     const { ref: tdroneR, inView: tdroneVisible } = useInView({ triggerOnce: true })
     const { ref: sidiIm, inView: sidiImVisible } = useInView({ triggerOnce: true })
@@ -28,10 +33,22 @@ const Invest = () => {
     const { ref: tupan, inView: tupanVisible } = useInView({ triggerOnce: true })
     const { ref: reg, inView: regVisible } = useInView({ triggerOnce: true })
 
+    const desert = [
+        "Safeguarding against inflation",
+        "Dubai's pioneering role in the realm of tokenization",
+        "Participation in the profits",
+    ]
+
     const aviation = [
         "Aviation tokenization",
         "Participation in the profits",
         "High Security provided by the ZENIQ Smartchain"
+    ]
+
+    const vooM = [
+        "Aviation meets tokenization",
+        "Unique access to air mobility",
+        "Combining the real world with the crypto and blockchain"
     ]
 
     const drone = [
@@ -56,6 +73,10 @@ const Invest = () => {
 
     return (
         <main>
+            <Head>
+                <title>Invest in the future's world | SAFIR ZENIQ</title>
+                <meta name="description" content="Stand out and help build tomorrow's world, by investing in Real Estate (Desert Pearl and SIDI), Aviation (Avinoc, Tupan Aircraft, and VOO), and even fight climate change with TUPAN" />
+            </Head>
             <header ref={hero} className="hero row phone:col phone:items-end items-center justify-end">
                 <div className="phone:col phone:gap-[0vw] row items-center gap-[6.044678055190539vw]" >
                     <h1 className={`phone:mr-[2.7vw] phone:-mb-[5vw] -mb-0 -mr-[9.067017082785808vw] animation phone:text-center hiddenRight ${heroVisible ? 'showAnimation' : ''}`}>
@@ -136,6 +157,80 @@ const Invest = () => {
                 </div>
             </header>
             <div className="invest-main">
+                <section id="ddx" className='col gap-[10.38107752956636vw] phone:gap-[12.077294685990339vw] relative'>
+                    <div className={`${youtube ? 'fixed' : 'hidden'} top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.5)] col items-center justify-center z-[4] `} onClick={() => {
+                        setYoutube(false)
+                        document.body.style.overflow = "auto";
+                    }}>
+                        <div className='col gap-[1vw] phone:gap-[2vw]'>
+                            <svg className="self-end justify-self-end phone:w-[4vw] phone:top-[40vw] phone:right-[7.729468599033816vw] top-[12%] right-[20%] w-[1vw] cursor-pointer" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={() => {
+                                setYoutube(false)
+                                document.body.style.overflow = "auto";
+                            }}>
+                                <path d="M9.00989 7.24034L15.6154 0.652747C16.1041 0.165169 16.8955 0.166086 17.3831 0.654797C17.8707 1.14351 17.8698 1.93497 17.3811 2.42257L10.7784 9.00736L17.3782 15.6016C17.8666 16.0895 17.8668 16.881 17.3789 17.3693C16.8909 17.8577 16.0994 17.8579 15.6111 17.37L9.00824 10.7727L2.40313 17.36C1.9144 17.8475 1.12295 17.8466 0.635355 17.3579C0.147757 16.8692 0.148695 16.0777 0.637406 15.5901L7.23971 9.00572L0.643851 2.41546C0.155511 1.92749 0.155238 1.13603 0.643206 0.647688C1.13118 0.159348 1.92264 0.159075 2.41098 0.647044L9.00987 7.24034H9.00989Z" fill="white" />
+
+                            </svg>
+                            <iframe src="https://www.youtube.com/embed/awXaWl_vmaU?si=hRBoFrgQuZp3_YBj" class={`phone:w-[96vw] w-[60vw] aspect-video`} allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div ref={desertPearl} className='col gap-[4.204993429697766vw] phone:gap-[7.246376811594203vw] items-center' >
+                        <h2 className='text-light-green'>
+                            The Desert Pearl
+                        </h2>
+                        <div className='section'>
+                            <button className='bg-[url("https://img.youtube.com/vi/awXaWl_vmaU/sddefault.jpg")] bg-cover bg-center phone:w-full w-[32.8515111695138vw] aspect-video rounded-md grid items-center justify-center' onClick={() => {
+                                setYoutube(true)
+                                setTimeout(() => { }, 1000)
+
+                                document.body.style.overflow = "hidden";
+                            }}>
+                                <svg className='phone:w-[13.043478260869565vw] w-[4.730617608409987vw]' viewBox="0 0 72 73" fill="none" >
+                                    <path d="M36 72.5004C55.8823 72.5004 72 56.3825 72 36.5002C72 16.6178 55.8823 0.5 36 0.5C16.1178 0.5 0 16.6178 0 36.5002C0 56.3825 16.1178 72.5004 36 72.5004Z" fill="white" />
+                                    <path d="M26.8442 51.4624V21.5376C26.8456 21.4146 26.8796 21.2942 26.9429 21.1887C27.0063 21.0833 27.0965 20.9966 27.2044 20.9376C27.3123 20.8786 27.434 20.8495 27.557 20.8531C27.6799 20.8567 27.7996 20.893 27.9039 20.9583L51.4565 35.9207C51.5527 35.9837 51.6317 36.0696 51.6864 36.1707C51.741 36.2719 51.7697 36.385 51.7697 36.5C51.7697 36.615 51.741 36.7281 51.6864 36.8293C51.6317 36.9304 51.5527 37.0163 51.4565 37.0793L27.9039 52.0417C27.7996 52.1069 27.6799 52.1433 27.557 52.1469C27.434 52.1505 27.3123 52.1213 27.2044 52.0624C27.0965 52.0034 27.0063 51.9167 26.9429 51.8112C26.8796 51.7058 26.8456 51.5854 26.8442 51.4624Z" fill="#2BD2C2" />
+                                </svg>
+                            </button>
+                            <div className='text-flex'>
+                                <h4 className={`hiddenDown ${desertPearlVisible ? 'showY delay-200' : ''} font-bold`}>Real Estate Redefined</h4>
+                                <p className={`hiddenDown ${desertPearlVisible ? 'showY delay-500' : ''} phone:text-center`}>
+                                    DDX Global is a tokenization consultancy dedicated to exploring and implementing asset tokenization solutions.
+                                    The company's core focus is on leveraging blockchain technology to develop world-leading propositions in the asset tokenization space.
+                                </p>
+                                <p className={`hiddenDown ${desertPearlVisible ? 'showY delay-500' : ''} phone:text-center`}>
+                                    DESERT PEARL is a pioneering project that seamlessly blends master-planned development, real estate, and tokenization.
+                                    The vision of the project is to harmoniously combine nature, Arab history, and heritage with tourism, presenting a unique and immersive experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div ref={dtp} className='section'>
+                        <div className={`animation hiddenRight ${dtpVisible ? 'showAnimation delay-200' : ''} phone:order-2 text-cta-flex`}>
+                            <div className='text-flex'>
+                                <h2 className='font-bold'>
+                                    Desert Pearl Token
+                                </h2>
+                                <p className='phone:text-center'>
+                                    Within Dubai's visionary landscape, the Desert Pearl project emerges as an unparalleled masterpiece, a testament to grandeur and innovation. Spanning vast horizons, it solidifies its place as the largest and most ambitious singular real estate endeavor Dubai has ever embarked upon.
+                                </p>
+                                <ul>
+                                    {desert.map((point, index) =>
+                                        <li key={index}>
+                                            <svg className='perk' viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M36 18C36 8.0595 27.9405 0 18 0C8.0595 0 0 8.0595 0 18C0 27.9405 8.0595 36 18 36C27.9405 36 36 27.9405 36 18Z" fill="#2BD2C2" />
+                                                <path d="M23.5889 13.185C23.8714 12.8771 24.2646 12.694 24.6821 12.676C25.0995 12.658 25.507 12.8066 25.8149 13.089C26.1229 13.3715 26.306 13.7647 26.324 14.1822C26.342 14.5996 26.1934 15.0071 25.9109 15.3151L17.6609 24.3151C17.5172 24.4716 17.3433 24.5974 17.1496 24.6849C16.956 24.7724 16.7466 24.8198 16.5342 24.8243C16.3217 24.8288 16.1106 24.7902 15.9134 24.711C15.7162 24.6317 15.5372 24.5133 15.3869 24.363L10.8869 19.863C10.7349 19.7182 10.6133 19.5444 10.5294 19.3519C10.4455 19.1594 10.4009 18.952 10.3983 18.742C10.3957 18.532 10.4352 18.3236 10.5143 18.1291C10.5934 17.9345 10.7107 17.7578 10.8591 17.6092C11.0076 17.4607 11.1842 17.3433 11.3787 17.2641C11.5732 17.1848 11.7816 17.1452 11.9916 17.1477C12.2016 17.1501 12.409 17.1945 12.6015 17.2783C12.7941 17.3621 12.968 17.4836 13.1129 17.6355L16.4504 20.973L23.5889 13.185Z" fill="white" />
+                                            </svg>
+                                            <span className='phone:max-w-[84.54106280193237vw] max-w-[35vw]'>
+                                                {point}
+                                            </span>
+                                        </li>)}
+                                </ul>
+                            </div>
+                            <a target="_blank" href="http://ddx.ae/dp/" className='button'>
+                                More About
+                            </a>
+                        </div>
+                        <div className={`animation hiddenLeft ${dtpVisible ? 'showAnimation delay-200' : ''} w-[25.16425755584757vw] phone:w-[90.82125603864735vw] aspect-[1.0758426966292134] bg-cover bg-center`} style={{ backgroundImage: `url(${ddx.src})` }} />
+                    </div>
+                </section>
                 <section id="avinoc" className='col gap-[10.38107752956636vw] phone:gap-[12.077294685990339vw] relative'>
                     <div className={`${vimeo ? 'fixed' : 'hidden'} top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.5)] col items-center justify-center z-[4] `} onClick={() => {
                         setVimeo(false)
@@ -206,6 +301,36 @@ const Invest = () => {
                             </a>
                         </div>
                         <div className={`animation hiddenLeft ${avinocVisible ? 'showAnimation delay-200' : ''} w-[25.16425755584757vw] phone:w-[90.82125603864735vw] aspect-[1.0758426966292134] bg-cover bg-center`} style={{ backgroundImage: `url(${avinoc.src})` }} />
+                    </div>
+                </section>
+                <section id="voo" ref={voo} className='section'>
+                    <div className={`animation hiddenLeft ${vooVisible ? 'showAnimation delay-200' : ''} w-[25.16425755584757vw] phone:w-[90.82125603864735vw]  phone:order-2 aspect-square bg-cover bg-center rounded-lg`} style={{ backgroundImage: `url(${vooPic.src})` }} />
+
+                    <div className={`animation hiddenRight ${vooVisible ? 'showAnimation delay-200' : ''} text-cta-flex`}>
+                        <div className='text-flex'>
+                            <h2 className='font-bold'>
+                                VOO Marketplace
+                            </h2>
+                            <p className='phone:text-center'>
+                                VOO’s groundbreaking technology and its algorithm ensure actual and valid charter prices, and advanced search filters help find the best deals.
+                                VOO’s smart data transfer technology enables instant, centralized communication with maximum speed and high security of data transfer. This ultra-efficient software is the perfect solution that delivers instant bookings.
+                            </p>
+                            <ul>
+                                {vooM.map((point, index) =>
+                                    <li key={index}>
+                                        <svg className='perk' viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M36 18C36 8.0595 27.9405 0 18 0C8.0595 0 0 8.0595 0 18C0 27.9405 8.0595 36 18 36C27.9405 36 36 27.9405 36 18Z" fill="#2BD2C2" />
+                                            <path d="M23.5889 13.185C23.8714 12.8771 24.2646 12.694 24.6821 12.676C25.0995 12.658 25.507 12.8066 25.8149 13.089C26.1229 13.3715 26.306 13.7647 26.324 14.1822C26.342 14.5996 26.1934 15.0071 25.9109 15.3151L17.6609 24.3151C17.5172 24.4716 17.3433 24.5974 17.1496 24.6849C16.956 24.7724 16.7466 24.8198 16.5342 24.8243C16.3217 24.8288 16.1106 24.7902 15.9134 24.711C15.7162 24.6317 15.5372 24.5133 15.3869 24.363L10.8869 19.863C10.7349 19.7182 10.6133 19.5444 10.5294 19.3519C10.4455 19.1594 10.4009 18.952 10.3983 18.742C10.3957 18.532 10.4352 18.3236 10.5143 18.1291C10.5934 17.9345 10.7107 17.7578 10.8591 17.6092C11.0076 17.4607 11.1842 17.3433 11.3787 17.2641C11.5732 17.1848 11.7816 17.1452 11.9916 17.1477C12.2016 17.1501 12.409 17.1945 12.6015 17.2783C12.7941 17.3621 12.968 17.4836 13.1129 17.6355L16.4504 20.973L23.5889 13.185Z" fill="white" />
+                                        </svg>
+                                        <span className='phone:max-w-[84.54106280193237vw] max-w-[35vw]'>
+                                            {point}
+                                        </span>
+                                    </li>)}
+                            </ul>
+                        </div>
+                        <a target="_blank" href="https://www.voo.aero/" className='button'>
+                            More About
+                        </a>
                     </div>
                 </section>
                 <section id="tdrone" className='col gap-[10.38107752956636vw] phone:gap-[12.077294685990339vw]' >

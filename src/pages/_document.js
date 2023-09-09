@@ -6,9 +6,9 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Zeniq 2077" />
+        <meta name="description" content="Safir Zeniq" />
         <meta name="author" content="ashendhiaa" />
-        <title>xifz
+        <title>Safir Zeniq - Siffedine
         </title>
       </Head>
       <body>

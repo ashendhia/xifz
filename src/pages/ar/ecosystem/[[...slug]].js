@@ -1,5 +1,5 @@
-import { useState } from 'react'
 import Image from 'next/image'
+import Head from 'next/head'
 import { useInView } from 'react-intersection-observer'
 
 import zencoin from '/public/assets/zencoin.png'
@@ -43,6 +43,10 @@ const Eco = () => {
 
     return (
         <main>
+            <Head>
+                <title>ZENIQ Smartchain</title>
+                <meta name="description" content="دمج عالم التشفير والعالم المالي. نحن نقدم لك البنية التحتية والمنتجات والخدمات الحقيقية حول ZENIQ Coin منذ البداية." />
+            </Head>
             <header ref={hero} className="hero grid justify-center items-center">
                 <div className="phone:col phone:gap-[18.357487922705314vw] row items-center gap-[6.044678055190539vw]" >
                     <svg className={`animation hiddenLeft ${heroVisible ? 'showAnimation' : ''} phone:w-[74.8792270531401vw] w-[35.28252299605782vw] phone:order-2 `} viewBox="0 0 537 519" fill="none" xmlns="http://www.w3.org/2000/svg">

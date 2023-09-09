@@ -74,7 +74,9 @@ export default function App({ Component, pageProps }) {
       },
       projects: {
         title: "Projects",
+        ddx: "Desert Pearl",
         avinoc: "AVINOC",
+        voo: "VOO Marketplace",
         tdrone: "TDRONE",
         tupan: "TUPAN",
         sidi: "SIDI TOKEN",
@@ -108,7 +110,9 @@ export default function App({ Component, pageProps }) {
       },
       projects: {
         title: "Projets",
+        ddx: "Desert Pearl",
         avinoc: "AVINOC",
+        voo: "VOO Marketplace",
         tdrone: "TDRONE",
         tupan: "TUPAN",
         sidi: "SIDI TOKEN",
@@ -141,7 +145,9 @@ export default function App({ Component, pageProps }) {
       },
       projects: {
         title: "المشاريع",
+        ddx: "لؤلؤة الصحراء",
         avinoc: "AVINOC",
+        voo: "VOO Marketplace",
         tdrone: "TDRONE",
         tupan: "TUPAN",
         sidi: "SIDI TOKEN",
@@ -461,6 +467,19 @@ export default function App({ Component, pageProps }) {
                 {footer.projects.title}
               </h4>
               <div className='col gap-[1.0512483574244416vw]'>
+                <Link href={`${langRoute}/invest/ddx`} scroll={false} class="footerLink" onClick={() => {
+                  setCurrentRoute(`${langRoute}/invest/ddx`)
+                  setTimeout(() => {
+                    top = getOffset(document.getElementById("ddx")).top
+                    window.scrollTo({
+                      top: (top - 100),
+                      left: 0,
+                      behavior: 'smooth'
+                    })
+                  }, 0)
+                }}>
+                  {footer.projects.ddx}
+                </Link>
                 <Link href={`${langRoute}/invest/avinoc`} scroll={false} class="footerLink" onClick={() => {
                   setCurrentRoute(`${langRoute}/invest/avinoc`)
                   setTimeout(() => {
@@ -473,6 +492,19 @@ export default function App({ Component, pageProps }) {
                   }, 0)
                 }}>
                   {footer.projects.avinoc}
+                </Link>
+                <Link href={`${langRoute}/invest/voo`} scroll={false} class="footerLink" onClick={() => {
+                  setCurrentRoute(`${langRoute}/invest/voo`)
+                  setTimeout(() => {
+                    top = getOffset(document.getElementById("voo")).top
+                    window.scrollTo({
+                      top: (top - 100),
+                      left: 0,
+                      behavior: 'smooth'
+                    })
+                  }, 0)
+                }}>
+                  {footer.projects.voo}
                 </Link>
                 <Link href={`${langRoute}/invest/tdrone`} scroll={false} class="footerLink" onClick={() => {
                   setCurrentRoute(`${langRoute}/invest/tdrone`)

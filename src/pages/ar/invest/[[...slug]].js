@@ -226,7 +226,7 @@ const Invest = () => {
                                         </li>)}
                                 </ul>
                             </div>
-                            <a target="_blank" href="http://ddx.ae/dp/" className='button'>
+                            <a target="_blank" href="https://safir.com/info/desert-pearl/en/#valkdmk5lf" className='button'>
                                 للمزيد
                             </a>
                         </div>
@@ -368,7 +368,7 @@ const Invest = () => {
                                         </li>)}
                                 </ul>
                             </div>
-                            <a target="_blank" href="https://tupan.tech" className='button'>
+                            <a target="_blank" href="https://safir.com/info/tupantdrone/#valkdmk5lf" className='button'>
                                 للمزيد
                             </a>
                         </div>
@@ -396,7 +396,7 @@ const Invest = () => {
                                     </li>)}
                             </ul>
                         </div>
-                        <a target="_blank" href="https://www.tupan.io" className='button'>
+                        <a target="_blank" href="https://safir.com/info/tupantdrone/#valkdmk5lf" className='button'>
                             للمزيد
                         </a>
                     </div>
